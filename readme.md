@@ -19,15 +19,15 @@ We achieve this using a express.js http server that listen to requests from our 
    `git clone https://github.com/TheRealCrazyfuy/PhoneStatusToDiscord`
 
 2. Configure the `.env` file with your bot token, name, phone model and set the port you want to use
-   > [!WARNING]  
-    > You will need to allow external connections to the port you set
-3. Install all the modules
+> [!WARNING]  
+> You will need to allow external connections to the port you set
+1. Install all the modules
    `npm install`
 
-4. Set up the bot slash commands
+2. Set up the bot slash commands
    `node deployCommands.js`
 
-5. Start the bot
+3. Start the bot
    `node index.js`
 
 Once the bot is running, we must add it to our server and execute the `/createembed` command on the channel we want the embed
