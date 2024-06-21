@@ -21,13 +21,13 @@ We achieve this using a express.js http server that listen to requests from our 
 2. Configure the `.env` file with your bot token, name, phone model and set the port you want to use
 > [!WARNING]  
 > You will need to allow external connections to the port you set
-1. Install all the modules
+3. Install all the modules
    `npm install`
 
-2. Set up the bot slash commands
+4. Set up the bot slash commands
    `node deployCommands.js`
 
-3. Start the bot
+5. Start the bot
    `node index.js`
 
 Once the bot is running, we must add it to our server and execute the `/createembed` command on the channel we want the embed
@@ -67,3 +67,8 @@ If you did everything right, the bot should be working now
 - [Discord.js](https://github.com/discordjs/discord.js)
 - [express](https://github.com/expressjs/express)
 - [dotenv](https://github.com/motdotla/dotenv)
+
+
+If you like this project, please give it a ⭐
+
+and ff you find any bug raise an issue, I will look into it.
