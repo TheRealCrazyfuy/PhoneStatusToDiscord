@@ -35,7 +35,7 @@ Once the bot is running, we must add it to our server and execute the `/createem
 ### On the phone
 1. Head to the Play Store and download [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)
 2. Open the app and agree to the warning
-3. Download the backup file [here](./Automate_tasks.bak)
+3. Download the backup file [here](https://github.com/TheRealCrazyfuy/PhoneStatusToDiscord/raw/main/Automate_tasks.bak)
 4. Press on the 3 top-left lines to open the menu, go to settings and import the backup
    
 
