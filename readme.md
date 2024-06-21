@@ -1,5 +1,5 @@
 # Phone Status to Discord
-This is a node.js discord bot that can create a realtime updated embed information of your phone. 
+This is a node.js discord bot that can create a realtime updated embed with information of your phone. 
 
 We achieve this using a express.js http server that listen to requests from our phone and updates the embed with that info
 
@@ -71,4 +71,4 @@ If you did everything right, the bot should be working now
 
 If you like this project, please give it a ⭐
 
-and ff you find any bug raise an issue, I will look into it.
+and if you find any bug raise an issue, I will look into it.
