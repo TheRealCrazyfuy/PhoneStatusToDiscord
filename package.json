@@ -1,0 +1,24 @@
+{
+  "name": "phonestatustodiscord",
+  "version": "1.0.0",
+  "description": "A discord bot that updates an embed with your current phone status",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRealCrazyfuy/PhoneStatusToDiscord.git"
+  },
+  "author": "TheRealCrazyfuy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRealCrazyfuy/PhoneStatusToDiscord/issues"
+  },
+  "homepage": "https://github.com/TheRealCrazyfuy/PhoneStatusToDiscord#readme",
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
