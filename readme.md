@@ -72,3 +72,7 @@ If you did everything right, the bot should be working now
 If you like this project, please give it a ⭐
 
 and if you find any bug raise an issue, I will look into it.
+
+For discord support you can join my server
+
+![Discord Banner 2](https://canary.discord.com/api/guilds/942133699523272704/widget.png?style=banner3)
