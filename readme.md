@@ -73,6 +73,6 @@ If you like this project, please give it a ⭐
 
 and if you find any bug raise an issue, I will look into it.
 
-For discord support you can join my server
+For discord support you can join my server [here](https://discord.gg/Hc4UPXqc4j)
 
 ![Discord Banner 2](https://canary.discord.com/api/guilds/942133699523272704/widget.png?style=banner3)
