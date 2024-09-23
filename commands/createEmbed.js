@@ -8,13 +8,36 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('createembed')
         .setDescription('Creates the phone status embed on the current channel'),
-    async execute(interaction, client) {
+    async execute(interaction) {
 
         if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
             interaction.reply("Denied access.")
             return
         }
-        await interaction.reply({ content: 'Created!', ephemeral: true });
+
+        /**
+         * Try delete old embed
+         */
+        const client = interaction.client; // obtain client
+        const channel = await client.channels.fetch(readVariable("CHANNEL_ID")); // fetch channel
+
+        try {
+            const message = await channel.messages.fetch(readVariable("MESSAGE_ID")); // fetch message
+            if (message) {
+                await message.delete(); // delete message
+            }
+        } catch (error) {
+            if (error.code === 10008) {
+                // Message not found
+                console.warn(`Message with ID ${readVariable("MESSAGE_ID")} not found.`);
+            } else {
+                console.error("Error deleting message:", error);
+            }
+        }
+
+        /**
+         * Create and send new embed
+         */
         const statusEmbed = new EmbedBuilder()
             .setColor(0x0099FF)
             .setTitle(process.env.YOUR_NAME + `'s phone status`)
@@ -40,6 +63,8 @@ module.exports = {
         writeVariable("MESSAGE_ID", id)
         console.log("Setting CHANNEL_ID to" + interaction.channelId)
         writeVariable("CHANNEL_ID", interaction.channelId)
+
+        await interaction.reply({ content: 'Created succesfully!', ephemeral: true });
     },
 };
 
