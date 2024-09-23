@@ -20,7 +20,7 @@ const rest = new REST({ version: '9' }).setToken(process.env.DISCORD_TOKEN);
             { body: commands },
         );
 
-        console.log('Comandos registrados.');
+        console.log('Succesfully registered commands.');
     } catch (error) {
         console.error(error);
     }
