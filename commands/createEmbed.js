@@ -33,6 +33,7 @@ module.exports = {
             )
             .addFields(
                 { name: '⏰ Last alarm', value: 'Not registered yet', inline: true },
+                { name: '⌚ Watch battery', value: '0', inline: true },
             )
             .setFooter({ text: 'https://github.com/TheRealCrazyfuy/PhoneStatusToDiscord' });
         const { id } = await interaction.client.channels.cache.get(interaction.channelId).send({ embeds: [statusEmbed] });

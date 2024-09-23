@@ -53,6 +53,7 @@ app.post('/api/', (req, res) => {
   const location = req.query.loc;
   const alarm = req.query.alarm;
   const batterytemp = req.query.batttemp;
+  const watchbattery = req.query.watchbatt;
   if (battery) {
     client.channels.fetch(readVariable("CHANNEL_ID"))
       .then(channel => {
@@ -166,6 +167,25 @@ app.post('/api/', (req, res) => {
             for (let i = 0; i < embed.fields.length; i++) {
               if (embed.fields[i].name === "⏰ Last alarm") {
                 embed.fields[i].value = `<t:${unixTimestamp()}:f>`;
+              }
+            }
+            // Edit the message with the new embed
+            message.edit({ embeds: [embed] });
+          });
+      });
+  }
+  if (watchbattery) {
+    client.channels.fetch(channelID)
+      .then(channel => {
+        channel.messages.fetch(messageID)
+          .then(message => {
+            // Get the embed from the message
+            let embed = message.embeds[0];
+
+            // Edit the fields
+            for (let i = 0; i < embed.fields.length; i++) {
+              if (embed.fields[i].name === "⌚ Watch battery") {
+                embed.fields[i].value = Math.round(watchbattery) + "%";
               }
             }
             // Edit the message with the new embed
