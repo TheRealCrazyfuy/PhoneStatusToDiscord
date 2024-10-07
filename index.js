@@ -45,6 +45,10 @@ function authentication(req, res, next) {
 app.use(authentication)
 app.use(bodyParser.json({ type: 'application/*+json' }))
 
+app.get('/status', (res) => {
+  res.sendStatus(200)
+})
+
 app.post('/api/', (req, res) => {
 
   const battery = req.query.batt;
