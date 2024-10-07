@@ -16,7 +16,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 // Log in to Discord with your client's token
 client.login(process.env.DISCORD_TOKEN);
 
-app.get('/status', (res) => {
+app.get('/status', (req, res) => {
   res.sendStatus(200)
 })
 
