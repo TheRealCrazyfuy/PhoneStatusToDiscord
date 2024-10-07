@@ -16,6 +16,10 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 // Log in to Discord with your client's token
 client.login(process.env.DISCORD_TOKEN);
 
+app.get('/status', (res) => {
+  res.sendStatus(200)
+})
+
 // Load json
 var variables = require('./variables.json')
 
@@ -44,10 +48,6 @@ function authentication(req, res, next) {
 }
 app.use(authentication)
 app.use(bodyParser.json({ type: 'application/*+json' }))
-
-app.get('/status', (res) => {
-  res.sendStatus(200)
-})
 
 app.post('/api/', (req, res) => {
 
